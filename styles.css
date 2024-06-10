@@ -3,6 +3,43 @@
 	padding: 0;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.claro {
+	background-color: rgb(240, 240, 240);
+	color: rgba(37, 4, 68, 0.863);
+}
+
+.escuro {
+	background-color: rgba(37, 4, 68, 0.863);
+	color: rgb(240, 240, 240);
+}
+
+.escuro .title {
+	color: white;
+}
+
+.escuro .subtitle {
+	color: rgba(255, 255, 255, 0.514);
+}
+
+.escuro #text {
+	color: white;
+}
+
+.escuro #reiniciar {
+	background-color: white;
+	color: rgba(37, 4, 68, 0.863);
+}
+
+.escuro #reiniciar:hover {
+	background-color: rgb(202, 202, 202);
+}
+
+.escuro .toggle-theme {
+	background-color: rgba(9, 3, 63, 0.863);
+	justify-content: flex-end;
+}
+
 .section {
 	display: flex;
 	justify-content: center;
@@ -20,14 +57,14 @@
 
 .toggle-theme {
 	width: 70px;
-	height: 30px;
-	background-color: aqua;
+	height: 26px;
+	background-color: rgba(82, 172, 233, 0.671);
 	border-radius: 30px;
 	align-self: flex-end;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 3px;
+	padding: 6px;
 }
 
 .toggle-ball {
