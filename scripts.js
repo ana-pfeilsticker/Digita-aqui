@@ -71,6 +71,8 @@ const textos = [
 	"Miguel era um talentoso artista plástico, conhecido por suas esculturas detalhadas e expressivas. Desde jovem, ele esculpia em madeira, pedra e argila, criando obras que capturavam a essência da condição humana. Um dia, recebeu uma encomenda especial: uma escultura para o parque central da cidade. Miguel trabalhou arduamente, inspirando-se nas histórias e nas pessoas da comunidade. Quando a escultura foi finalmente revelada, tornou-se um símbolo de unidade e esperança. As pessoas vinham de longe para admirar a obra, e Miguel se sentiu orgulhoso de ter deixado um legado duradouro.",
 ];
 
+localStorage.setItem("testeEmAndamento", false);
+
 function novoTexto() {
 	const index = Math.floor(Math.random() * textos.length);
 	texto.textContent = textos[index];
@@ -91,6 +93,19 @@ function iniciar() {
 	}
 }
 
-entrada.addEventListener("keyup", atualizarTeste);
+function verificar() {
+	const tempoFinal = new Date().getTime();
+	const tempoInicial = parseInt(localStorage.getItem("tempoInicial"));
+	const tempoGasto = tempoFinal - tempoInicial;
+
+	resultado.textContent = `Parabéns, você levou ${tempoGasto / 1000} segundos!`;
+
+	localStorage.setItem("testeEmAndamento", false);
+	entrada.value = "";
+	localStorage.setItem("tempoInicial", new Date().getTime());
+	novoTexto();
+}
+
+entrada.addEventListener("click", atualizarTeste);
 
 novoTexto();
