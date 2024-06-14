@@ -106,6 +106,14 @@ function verificar() {
 	novoTexto();
 }
 
+function alternarTema() {
+	const body = document.body;
+
+	body.classList.toggle("claro");
+	body.classList.toggle("escuro");
+}
+
+toggleThemeBtn.addEventListener("click", alternarTema);
 entrada.addEventListener("click", atualizarTeste);
 
 novoTexto();
